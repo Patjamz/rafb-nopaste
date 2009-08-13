@@ -1,0 +1,35 @@
+INSTALLATION INSTRUCTIONS
+
+Making your own Pastebin
+
+================================
+
+Files:
+
+index.html              - Presents the HTML form for pasting text.
+paste.php               - Form handler that drives the rest of the process.
+include/highlight.inc   - Syntax highlighting routines.
+include/pastify.inc     - Takes syntax highlighted text and turns it into
+                          HTML to be served when the paste is viewed.
+include/createpage.inc  - Handles writing the HTML page to disk and
+                          returning the resulting file path.
+
+================================
+
+Set up this directory structure more or less the way it comes out of
+source control.
+
+Update the config.php file to reflect your server and setup.
+
+You may also want to make sure your web server has permissions to
+write files into the results output directory (which is results/ by
+default)
+
+It is also a good idea to implement some sort of upload rate throttling.
+This can be done by keeping track of pastes per IP address and shedding
+load if it passes a certain threshold.
+
+Additionally, if you wish pastes to expire after a given amount of time,
+you will need to write a housekeeping script or cron job that periodically
+cleans out expired pastes.
+
