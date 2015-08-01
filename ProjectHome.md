@@ -1,0 +1,1 @@
+This code was used by rafb.net/paste for seven years and over 2.25 million pasted code snippets. Now that the site has been discontinued, its source code is being put into the open source community.
